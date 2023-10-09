@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="database_test.GamePage"
+             Shell.BackgroundColor="Orange">
+    <VerticalStackLayout
+        Padding="20,100"
+        Spacing="20">
+
+        <VerticalStackLayout 
+            x:Name="QuestionArea"
+            Spacing="20">
+
+            <Label 
+            x:Name="QuestionLabel"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            FontSize="52"
+            Margin="0,20,0,80"
+            FontFamily="OpenSansSemibold"/>
+
+            <Entry x:Name="AnswerEntry"
+                HorizontalOptions="Center"
+                   FontSize="32"
+                   MinimumWidthRequest="80"
+                   HorizontalTextAlignment="Center"/>
+
+            <Button x:Name="SubmitAnswer"
+                Text="Answer"
+                Clicked="OnAnswerSubmitted"
+                HorizontalOptions="Center"
+                BackgroundColor="Orange"
+                FontSize="20"/>
+            <Label 
+                x:Name="AnswerLabel"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                FontSize="32"/>
+
+        </VerticalStackLayout>
+
+        <VerticalStackLayout  x:Name="GameOverArea"
+            Spacing="20">
+            <HorizontalStackLayout x:Name="GameOverLabels" HorizontalOptions="Center" Margin="0,20,0,80" >
+
+
+                <Label  FontFamily="OpenSansSemibold" FontSize="52" TextColor="Black" Text="GAME"  />
+                <Label FontFamily="OpenSansSemibold" FontSize="52" TextColor="Orange" Text=" OVER" />
+
+            </HorizontalStackLayout>
+
+
+            <Label 
+            x:Name="GameOverScoreLabel"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            FontSize="32"/>
+
+            <Button 
+                x:Name="BackToMenuBtn"
+                Text="Back to Menu"
+                Clicked="OnBackToMenu"
+                BackgroundColor="Orange"
+                FontSize="20"
+                HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+
+        
+    </VerticalStackLayout>
+</ContentPage>

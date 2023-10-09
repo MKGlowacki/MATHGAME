@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="database_test.MainPage"
+             Shell.NavBarIsVisible="False"
+             >
+
+    <ContentView>
+        <VerticalStackLayout
+            Spacing="10"
+            Padding="10"
+            >
+            
+            
+
+            <Grid RowDefinitions="Auto, Auto, Auto, Auto, *"
+                  ColumnDefinitions="150,150"
+                  Padding="10,50,10,10"
+                  RowSpacing="10"
+                  ColumnSpacing="10"
+                  HorizontalOptions="Center">
+
+                <HorizontalStackLayout Grid.ColumnSpan="2" HorizontalOptions="Center" Margin="0,30">
+                    <Label FontFamily="OpenSansSemibold" FontSize="42" TextColor="Black" Text="MATH"  />
+                    <Label FontFamily="OpenSansSemibold" FontSize="42" TextColor="Orange" Text=" GAME" />
+                </HorizontalStackLayout>
+                
+                
+
+                
+
+                <Grid Grid.Row="2" Grid.ColumnSpan="2" RowDefinitions="120, 120" 
+                      ColumnDefinitions="120,120"
+                      Padding="10"
+                      RowSpacing="40"
+                      ColumnSpacing="40"
+                      HorizontalOptions="Center">
+                    <Button BackgroundColor="Orange" FontSize="40" Grid.Column="0" Text="+" Clicked="OnGameChosen"/>
+                    <Button BackgroundColor="Orange" FontSize="40" Grid.Column="1" Text="-" Clicked="OnGameChosen"/>
+                    <Button BackgroundColor="Orange" FontSize="40" Grid.Row="1" Grid.Column="0" Text="*" Clicked="OnGameChosen"/>
+                    <Button BackgroundColor="Orange" FontSize="40" Grid.Row="1" Grid.Column="1" Text="/" Clicked="OnGameChosen"/>
+                </Grid>
+                
+                <Button Grid.Row="3" 
+                        Margin="0,120,0,0"
+                        x:Name="DifficultyButton"
+                        Grid.ColumnSpan="2" 
+                        WidthRequest="200"
+                        BackgroundColor="LimeGreen"
+                        Text="Difficulty: Easy"
+                        Clicked="OnDifficultyChanged"
+                        FontSize="18"
+                        
+                        />
+                
+               
+                <Button Grid.Row="4" VerticalOptions="End"
+                        
+                        Grid.ColumnSpan="2"
+                        BackgroundColor="Black"
+                        FontSize="20"
+                        Text="Game History"
+                        Clicked="OnPreviousGameChosen"/>
+                
+            </Grid>
+        </VerticalStackLayout>
+    </ContentView>
+
+</ContentPage>
